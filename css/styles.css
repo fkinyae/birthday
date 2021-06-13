@@ -5,4 +5,12 @@
 .container {
     text-align: center;
     width: fit-content;
+    border: 2px solid red;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    background-image: url(../images/stop.jpg);
+    
+    
 }
