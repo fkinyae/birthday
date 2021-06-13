@@ -4,25 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
     <title>Akan Names.</title>
 </head>
 <body>
-
+    
     <div class="container">
         <div class="jumbotron">
             <h2><strong>Akan Names.</strong></h2>
         </div>
-        <p>This is a web application that outputs the day of the week you were born and  your Akan Name(derived from Ghanian Culture).</p>
+        <p><strong>This is a web application that outputs the day of the week you were born and  your Akan Name(derived from Ghanian Culture).</strong></p>
         <h3><strong>Requirements.</strong></h3>
-        <p>You are required to enter your date of birth in this order 'dd/mm/yyyy'.</p>
+        <p><strong>You are required to enter your date of birth in this order 'dd/mm/yyyy'.</strong></p>
         <div class="row">
-            <label for="bornDate">Enter Your Date Of Birth.</label>
-            <input type="text" id="bornDate" class="bornDate">
-            <input type="submit" value="Submit Date" class="dateSubmit">
-
+            <label for="start">
+                Enter Date Of Birth:
+            </label>
+            <input type="date" id="bornDate" name="begin" placeholder="dd-mm-yyyy" value=""min="1800-01-01" max="3000-12-31">   
         </div>
+        <div class="row">
+            <h3><strong>Select Gender.</strong></h3>
+                <form action="">
+                <p><strong>Please select your gender:</strong></p>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male"><strong>Male</strong></label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female"><strong>Female</strong></label><br>
+        </div>
+        <input type="submit" value="Generate" class="generate">   
+        
 
     </div>
     
