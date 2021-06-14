@@ -18,14 +18,22 @@
         </div>
         <p><strong>This is a web application that outputs the day of the week you were born and  your Akan Name(derived from Ghanian Culture).</strong></p>
         <h3><strong>Requirements.</strong></h3>
-        <p><strong>You are required to enter your date of birth in this order 'dd/mm/yyyy'.</strong></p>
-        <div class="row">
-            <label for="start">
-                Enter Date Of Birth:
-            </label>
-            <input type="date" id="bornDate" name="begin" placeholder="dd-mm-yyyy" value=""min="1800-01-01" max="3000-12-31">   
-        </div>
-        <div class="row">
+        <p><strong>You are required to enter your date of birth.</strong></p>
+
+        <form name="myForm" class="form" onsubmit="getValidation();">
+                    <div class="row">
+                        <label for="date">Date Of Birth: </label>
+                        <input type="number" id="date" placeholder="date of birth eg.05" name="date">
+                    </div>
+                    <div class="row">
+                        <label for="month">Month Of Birth: </label>
+                        <input type="number" id="month" placeholder="Month Of Birth" name="month">
+                    </div>
+                    <div class="row">
+                        <label for="number">Year Of Birth: </label>
+                        <input type="number" id="year" placeholder="Year Of Birth eg. 2000" name="year">
+                    </div>
+                    <div class="row">
             <h3><strong>Select Gender.</strong></h3>
                 <form action="">
                 <p><strong>Please select your gender:</strong></p>
@@ -33,10 +41,10 @@
                 <label for="male"><strong>Male</strong></label><br>
                 <input type="radio" id="female" name="gender" value="female">
                 <label for="female"><strong>Female</strong></label><br>
-        </div>
-        <input type="submit" value="Generate" class="generate">   
-
-
+        </div>  
+        <button type="submit" class="generate" onclick="getGender();">Generate</button>
+        </form>
+        <script src="js/akan.js"></script>
     </div>
     
 </body>
