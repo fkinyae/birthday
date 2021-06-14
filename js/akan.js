@@ -5,15 +5,20 @@ let females = ["Akosua",  "Adwoa",  "Abenaa",  "Akua", "Yaa", "Afua", "Ama"];
 
 function getValidation() {
     let genders = document.getElementsByName("gender");
+    let dates = document.getElementById("date");
+    let months = document.getElementById("month");
+
     if (document.myForm.date.value == "" || isNaN(document.myForm.date.value) || document.myForm.date.value.length !=2 || document.myForm.date.value >31 || document.myForm.date.value <= 0) {
         alert("please provide a valid date!");
-        document.myForm.date.focus();
+        dates.focus();
         return false;
     } 
+
     else if (document.myForm.month.value == "" || isNaN(document.myForm.month.value) || document.myForm.month.value.length !=2 || document.myForm.month.value > 12 || document.myForm.month.value <= 0) {
         alert("please provide a valid month of birth");
         document.myForm.month.focus();
         return false;
+
     }
     else if (document.myForm.year.value == "" || document.myForm.year.value.length !=4 || document.myForm.year.value >3000 || document.myForm.year.value <=1700) {
         alert("please enter a valid year of birth eg.2003");
@@ -47,10 +52,18 @@ function getGender() {
 
     if (genders[0].checked==true && males[dayValue] && days[dayValue]) {
         let gender_value = "male";
-        alert("Your Akan Name is " + males[dayValue] + " & You were Born On a " + days[dayValue])
-    } else if (genders[1].checked==true && females[dayValue] && days[dayValue]) {
+        let wkday = days[dayValue];
+        let names = males[dayValue];
+        
+        alert("Your Akan Name is " +  names  + " & You were Born On a " + wkday);
+    }
+     else if (genders[1].checked==true && females[dayValue] && days[dayValue]) {
         let gender_value = "female";
-        alert("Your Akan Name is " + females[dayValue] + " & You were Born On a " + days[dayValue])
+        let wkday = days[dayValue];
+        let names = females[dayValue];
+  
+        alert("Your Akan Name is " +  names  + " & You were Born On a " + wkday);
+
     }
     else {   
         return false;
