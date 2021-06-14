@@ -5,13 +5,13 @@
 .container {
     text-align: center;
     width: fit-content;
-    border: 2px solid red;
+    border: 2px solid black;
     background-color: sandybrown;
 }
 
 body {
     font-family: 'Merriweather', serif;
-    background-image: url(../images/stop.jpg);  
+    background-image: url(../images/pexels-luis-del-río-15286.jpg);  
 }
 
 .generate {
