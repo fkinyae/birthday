@@ -23,7 +23,7 @@ function getValidation() {
         alert("You must choose atleast one gender");
     } 
     else {
-        return true;
+        return getGender();
     }
     
 }
@@ -59,7 +59,7 @@ function getGender() {
         alert("Your Akan Name is " +  names  + " & You were Born On a " + wkday);
 
     }
-    else {   62.
+    else {  
         return false;
     }   
 }
