@@ -8,22 +8,16 @@ function getValidation() {
     let dates = document.getElementById("date");
     let months = document.getElementById("month");
 
-    if (document.myForm.date.value == "" || isNaN(document.myForm.date.value) || document.myForm.date.value.length !=2 || document.myForm.date.value >31 || document.myForm.date.value <= 0) {
+    if (document.myForm.date.value == "" || isNaN(document.myForm.date.value) || document.myForm.date.value.length >2 || document.myForm.date.value >31 || document.myForm.date.value <= 0) {
         alert("please provide a valid date!");
-        dates.focus();
-        return false;
     } 
 
-    else if (document.myForm.month.value == "" || isNaN(document.myForm.month.value) || document.myForm.month.value.length !=2 || document.myForm.month.value > 12 || document.myForm.month.value <= 0) {
+    else if (document.myForm.month.value == "" || isNaN(document.myForm.month.value) || document.myForm.month.value > 12 || document.myForm.month.value <= 0) {
         alert("please provide a valid month of birth");
-        document.myForm.month.focus();
-        return false;
-
     }
-    else if (document.myForm.year.value == "" || document.myForm.year.value.length !=4 || document.myForm.year.value >3000 || document.myForm.year.value <=1700) {
+
+    else if (document.myForm.year.value == "" || document.myForm.year.value.length !=4 || document.myForm.year.value <=0) {
         alert("please enter a valid year of birth eg.2003");
-        document.myForm.year.focus();
-        return false;
     }
     else if (genders[0].checked==false && genders[1].checked==false) {
         alert("You must choose atleast one gender");
@@ -65,7 +59,7 @@ function getGender() {
         alert("Your Akan Name is " +  names  + " & You were Born On a " + wkday);
 
     }
-    else {   
+    else {   62.
         return false;
     }   
 }
